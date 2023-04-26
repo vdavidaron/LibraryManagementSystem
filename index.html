@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Library Management System</h1>
+        <div id="auth">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+        <div id="search" style="display: none;">
+            <h2>Search Books</h2>
+            <input type="text" id="searchQuery" placeholder="Search for books...">
+            <button id="searchBtn">Search</button>
+            <ul id="bookList"></ul>
+        </div>
+        <div id="reservation" style="display: none;">
+            <h2>Reserve a Book</h2>
+            <form id="reservationForm">
+                <label for="bookId">Book ID:</label>
+                <input type="text" id="bookId" name="bookId" required>
+                <br>
+                <button type="submit">Reserve</button>
+            </form>
+            <div id="reservationResult"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
